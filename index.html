@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Oréal Smart Routine &amp; Product Advisor</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!------- Header / Branding ------->
+      <header class="site-header">
+        <img
+          src="img/loreal-logo.png"
+          alt="L'Oréal"
+          class="site-logo"
+          width="280"
+        />
+        <h1 class="site-title">Smart Routine &amp; Product Advisor</h1>
+        <p class="site-tagline">Because you're worth it.</p>
+      </header>
+
+      <!------- Chat Area ------->
+      <main>
+        <section class="chatbox">
+          <!-- Shows the user's latest question. It resets with each new question. -->
+          <div id="latestQuestion" class="latest-question" hidden>
+            <span class="latest-label">You asked</span>
+            <span id="latestQuestionText"></span>
+          </div>
+
+          <!-- Message bubbles are added here by script.js -->
+          <div
+            id="chatWindow"
+            class="chat-window"
+            role="log"
+            aria-live="polite"
+            aria-label="Conversation"
+          ></div>
+
+          <!-- Starter questions the user can click -->
+          <div class="suggestions" id="suggestions">
+            <button type="button" class="suggestion">
+              Build me a simple morning skincare routine
+            </button>
+            <button type="button" class="suggestion">
+              Which L'Oréal shampoo helps dry, damaged hair?
+            </button>
+            <button type="button" class="suggestion">
+              What does hyaluronic acid do?
+            </button>
+          </div>
+
+          <form id="chatForm" class="chat-form">
+            <label for="userInput" class="visually-hidden">Message</label>
+            <input
+              id="userInput"
+              name="userInput"
+              type="text"
+              placeholder="Ask me about any L'Oréal product or routine…"
+              autocomplete="off"
+              maxlength="500"
+              required
+            />
+            <button type="submit" id="sendBtn">
+              <span class="material-icons" aria-hidden="true">send</span>
+              <span class="visually-hidden">Send</span>
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <!------- Footer Links ------->
+      <footer class="site-footer">
+        <p>&copy; 2026 L'Oréal. All rights reserved.</p>
+        <p class="footer-note">
+          Student project for the Global Career Accelerator. Not an official
+          L'Oréal website.
+        </p>
+        <nav>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
