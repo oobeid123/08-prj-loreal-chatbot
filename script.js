@@ -107,7 +107,7 @@ async function getReply() {
 
   // The AI sometimes adds Markdown symbols like **bold** or ## headings.
   // The chat shows plain text, so we remove them before displaying the reply.
-  const cleanReply = reply.replace(/**/g, "").replace(/^#+s*/gm, "");
+  const cleanReply = reply.replace(/\*\*/g, "").replace(/^#+\s*/gm, "");
 
   return cleanReply.trim();
 }
