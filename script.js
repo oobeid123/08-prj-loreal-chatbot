@@ -105,7 +105,11 @@ async function getReply() {
     throw new Error("Empty reply received");
   }
 
-  return reply.trim();
+  // The AI sometimes adds Markdown symbols like **bold** or ## headings.
+  // The chat shows plain text, so we remove them before displaying the reply.
+  const cleanReply = reply.replace(/**/g, "").replace(/^#+s*/gm, "");
+
+  return cleanReply.trim();
 }
 
 // Runs one full turn: show the question, ask the AI, show the answer.
