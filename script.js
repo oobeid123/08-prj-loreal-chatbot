@@ -3,7 +3,7 @@
 // The Cloudflare Worker that forwards our messages to OpenAI.
 // The OpenAI API key is stored as a secret inside the Worker,
 // so it never appears in this file or anywhere in the browser.
-const WORKER_URL = "https://loreal-chatbot.REPLACE-ME.workers.dev/";
+const WORKER_URL = "https://loreal-chatbot.oobeid123.workers.dev/";
 
 // The system prompt tells the AI who it is and what it may talk about.
 const SYSTEM_PROMPT = `You are the L'Oréal Smart Routine & Product Advisor, a friendly and knowledgeable beauty assistant for L'Oréal.
